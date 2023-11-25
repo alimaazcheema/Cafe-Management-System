@@ -73,5 +73,12 @@ namespace DB_project
         {
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            signup sign = new signup();
+            sign.Show();
+        }
     }
 }
