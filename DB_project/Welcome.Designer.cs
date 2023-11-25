@@ -55,7 +55,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(234)))), ((int)(((byte)(216)))));
             this.label6.Location = new System.Drawing.Point(128, 35);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(680, 38);
+            this.label6.Size = new System.Drawing.Size(657, 37);
             this.label6.TabIndex = 1;
             this.label6.Text = "Welcome to Eatly - Cafe Management System";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -65,7 +65,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(234)))), ((int)(((byte)(216)))));
-            this.label2.Location = new System.Drawing.Point(393, 219);
+            this.label2.Location = new System.Drawing.Point(393, 223);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(149, 25);
             this.label2.TabIndex = 28;

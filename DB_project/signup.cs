@@ -127,5 +127,16 @@ namespace DB_project
         {
 
         }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Login log=new Login();
+            log.Show();
+        }
     }
 }

@@ -46,6 +46,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,7 +69,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(458, 531);
+            this.button1.Location = new System.Drawing.Point(504, 524);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(114, 29);
@@ -278,12 +280,38 @@
             this.linkLabel1.Text = "Log in";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(234)))), ((int)(((byte)(216)))));
+            this.label10.Location = new System.Drawing.Point(323, 577);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(224, 22);
+            this.label10.TabIndex = 30;
+            this.label10.Text = "Already have an account? ";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.linkLabel2.Location = new System.Drawing.Point(539, 577);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(60, 22);
+            this.linkLabel2.TabIndex = 31;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Log In";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            // 
             // signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(139)))), ((int)(((byte)(116)))));
             this.ClientSize = new System.Drawing.Size(914, 628);
+            this.Controls.Add(this.linkLabel2);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.pass2);
@@ -332,5 +360,7 @@
         private Label label1;
         private Label label9;
         private LinkLabel linkLabel1;
+        private Label label10;
+        private LinkLabel linkLabel2;
     }
 }
