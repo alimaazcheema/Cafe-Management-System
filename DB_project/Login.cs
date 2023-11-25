@@ -65,8 +65,8 @@ namespace DB_project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dashboard dash = new dashboard();
-            dash.Show();
+            //dashboard dash = new dashboard();
+            //dash.Show();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
