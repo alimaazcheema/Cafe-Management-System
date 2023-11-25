@@ -81,5 +81,36 @@ namespace DB_project
             Login log = new Login();
             log.Show();
         }
+
+        private void fname(object sender, MouseEventArgs e)
+        {
+            this.Fname.Text = "";
+        }
+
+        private void lname(object sender, MouseEventArgs e)
+        {
+            this.Lname.Text = "";
+        }
+
+
+        private void username(object sender, MouseEventArgs e)
+        {
+            this.user.Text = "";
+        }
+
+        private void password1(object sender, MouseEventArgs e)
+        {
+            this.pass.Text = "";
+        }
+
+        private void password2(object sender, MouseEventArgs e)
+        {
+            this.pass2.Text = "";
+        }
+
+        private void phone(object sender, MouseEventArgs e)
+        {
+            this.number.Text = "";
+        }
     }
 }
