@@ -101,31 +101,29 @@
             // 
             // user
             // 
-            this.user.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(201)))), ((int)(((byte)(192)))));
-            this.user.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.user.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.user.Location = new System.Drawing.Point(351, 177);
-            this.user.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.user.Name = "user";
-            this.user.Size = new System.Drawing.Size(155, 21);
-            this.user.TabIndex = 6;
-            this.user.Text = "Enter Username";
-            this.user.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.user.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(201)))), ((int)(((byte)(192)))));
+            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox1.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.textBox1.Location = new System.Drawing.Point(401, 236);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(177, 21);
+            this.textBox1.TabIndex = 6;
+            this.textBox1.Text = "Enter Username";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // pass
             // 
-            this.pass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(201)))), ((int)(((byte)(192)))));
-            this.pass.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.pass.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.pass.Location = new System.Drawing.Point(351, 207);
-            this.pass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pass.Name = "pass";
-            this.pass.Size = new System.Drawing.Size(155, 21);
-            this.pass.TabIndex = 7;
-            this.pass.Text = "Enter Password";
-            this.pass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.pass.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(201)))), ((int)(((byte)(192)))));
+            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox2.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.textBox2.Location = new System.Drawing.Point(401, 276);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(177, 21);
+            this.textBox2.TabIndex = 7;
+            this.textBox2.Text = "Enter Password";
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // panel1
             // 
@@ -150,18 +148,15 @@
             // 
             // Fname
             // 
-            this.Fname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(201)))), ((int)(((byte)(192)))));
-            this.Fname.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Fname.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.Fname.Location = new System.Drawing.Point(351, 116);
-            this.Fname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Fname.Name = "Fname";
-            this.Fname.Size = new System.Drawing.Size(155, 21);
-            this.Fname.TabIndex = 21;
-            this.Fname.Text = "Enter First Name";
-            this.Fname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Fname.MouseClick += new System.Windows.Forms.MouseEventHandler(this.fname_click);
-            this.Fname.TextChanged += new System.EventHandler(this.Fname_TextChanged);
+            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(201)))), ((int)(((byte)(192)))));
+            this.textBox4.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox4.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.textBox4.Location = new System.Drawing.Point(401, 154);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(177, 21);
+            this.textBox4.TabIndex = 21;
+            this.textBox4.Text = "Enter First Name";
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
             // 
@@ -176,16 +171,15 @@
             // 
             // Lname
             // 
-            this.Lname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(201)))), ((int)(((byte)(192)))));
-            this.Lname.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Lname.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.Lname.Location = new System.Drawing.Point(351, 146);
-            this.Lname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Lname.Name = "Lname";
-            this.Lname.Size = new System.Drawing.Size(155, 21);
-            this.Lname.TabIndex = 23;
-            this.Lname.Text = "Enter Last Name";
-            this.Lname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(201)))), ((int)(((byte)(192)))));
+            this.textBox3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox3.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.textBox3.Location = new System.Drawing.Point(401, 194);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(177, 21);
+            this.textBox3.TabIndex = 23;
+            this.textBox3.Text = "Enter Last Name";
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
             // 
@@ -200,16 +194,15 @@
             // 
             // number
             // 
-            this.number.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(201)))), ((int)(((byte)(192)))));
-            this.number.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.number.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.number.Location = new System.Drawing.Point(351, 267);
-            this.number.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.number.Name = "number";
-            this.number.Size = new System.Drawing.Size(155, 21);
-            this.number.TabIndex = 25;
-            this.number.Text = "Enter Phone Number";
-            this.number.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(201)))), ((int)(((byte)(192)))));
+            this.textBox5.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox5.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.textBox5.Location = new System.Drawing.Point(401, 356);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(177, 21);
+            this.textBox5.TabIndex = 25;
+            this.textBox5.Text = "Enter Phone Number";
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label8
             // 
@@ -224,16 +217,15 @@
             // 
             // pass2
             // 
-            this.pass2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(201)))), ((int)(((byte)(192)))));
-            this.pass2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.pass2.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.pass2.Location = new System.Drawing.Point(351, 238);
-            this.pass2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pass2.Name = "pass2";
-            this.pass2.Size = new System.Drawing.Size(155, 21);
-            this.pass2.TabIndex = 27;
-            this.pass2.Text = "Confirm Password ";
-            this.pass2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(201)))), ((int)(((byte)(192)))));
+            this.textBox6.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox6.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.textBox6.Location = new System.Drawing.Point(401, 317);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(177, 21);
+            this.textBox6.TabIndex = 27;
+            this.textBox6.Text = "Confirm Password ";
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -251,7 +243,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(234)))), ((int)(((byte)(216)))));
-            this.label9.Location = new System.Drawing.Point(214, 428);
+            this.label9.Location = new System.Drawing.Point(245, 571);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(180, 19);
             this.label9.TabIndex = 28;
@@ -262,7 +254,7 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.linkLabel1.Location = new System.Drawing.Point(401, 428);
+            this.linkLabel1.Location = new System.Drawing.Point(458, 571);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(47, 19);
             this.linkLabel1.TabIndex = 29;
