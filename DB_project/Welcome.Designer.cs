@@ -43,40 +43,43 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(113)))), ((int)(((byte)(97)))));
             this.panel1.Controls.Add(this.label6);
             this.panel1.Location = new System.Drawing.Point(0, -1);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(816, 82);
+            this.panel1.Size = new System.Drawing.Size(933, 109);
             this.panel1.TabIndex = 34;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(234)))), ((int)(((byte)(216)))));
-            this.label6.Location = new System.Drawing.Point(288, 24);
+            this.label6.Location = new System.Drawing.Point(128, 35);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(214, 26);
+            this.label6.Size = new System.Drawing.Size(680, 38);
             this.label6.TabIndex = 1;
-            this.label6.Text = "Welcome to EATLY";
+            this.label6.Text = "Welcome to Eatly - Cafe Management System";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(234)))), ((int)(((byte)(216)))));
-            this.label2.Location = new System.Drawing.Point(381, 156);
+            this.label2.Location = new System.Drawing.Point(393, 219);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 21);
+            this.label2.Size = new System.Drawing.Size(149, 25);
             this.label2.TabIndex = 28;
-            this.label2.Text = "Continue as";
+            this.label2.Text = "Continue as...";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Customer
             // 
             this.Customer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(201)))), ((int)(((byte)(192)))));
-            this.Customer.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Customer.Location = new System.Drawing.Point(226, 210);
+            this.Customer.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Customer.Location = new System.Drawing.Point(238, 284);
+            this.Customer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Customer.Name = "Customer";
-            this.Customer.Size = new System.Drawing.Size(188, 43);
+            this.Customer.Size = new System.Drawing.Size(215, 57);
             this.Customer.TabIndex = 35;
             this.Customer.Text = "Customer";
             this.Customer.UseVisualStyleBackColor = false;
@@ -86,9 +89,10 @@
             // 
             this.Cashier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(201)))), ((int)(((byte)(192)))));
             this.Cashier.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Cashier.Location = new System.Drawing.Point(430, 210);
+            this.Cashier.Location = new System.Drawing.Point(471, 284);
+            this.Cashier.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cashier.Name = "Cashier";
-            this.Cashier.Size = new System.Drawing.Size(188, 43);
+            this.Cashier.Size = new System.Drawing.Size(215, 57);
             this.Cashier.TabIndex = 36;
             this.Cashier.Text = "Cashier";
             this.Cashier.UseVisualStyleBackColor = false;
@@ -98,9 +102,10 @@
             // 
             this.Manager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(201)))), ((int)(((byte)(192)))));
             this.Manager.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Manager.Location = new System.Drawing.Point(226, 272);
+            this.Manager.Location = new System.Drawing.Point(238, 367);
+            this.Manager.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Manager.Name = "Manager";
-            this.Manager.Size = new System.Drawing.Size(188, 43);
+            this.Manager.Size = new System.Drawing.Size(215, 57);
             this.Manager.TabIndex = 37;
             this.Manager.Text = "Manager";
             this.Manager.UseVisualStyleBackColor = false;
@@ -110,9 +115,10 @@
             // 
             this.Inventory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(201)))), ((int)(((byte)(192)))));
             this.Inventory.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Inventory.Location = new System.Drawing.Point(430, 272);
+            this.Inventory.Location = new System.Drawing.Point(471, 367);
+            this.Inventory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Inventory.Name = "Inventory";
-            this.Inventory.Size = new System.Drawing.Size(188, 43);
+            this.Inventory.Size = new System.Drawing.Size(215, 57);
             this.Inventory.TabIndex = 38;
             this.Inventory.Text = "Inventory Manager";
             this.Inventory.UseVisualStyleBackColor = false;
@@ -120,16 +126,17 @@
             // 
             // Welcome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(139)))), ((int)(((byte)(116)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(914, 600);
             this.Controls.Add(this.Inventory);
             this.Controls.Add(this.Manager);
             this.Controls.Add(this.Cashier);
             this.Controls.Add(this.Customer);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Welcome";
             this.Text = "Welcome";
             this.Load += new System.EventHandler(this.Welcome_Load);

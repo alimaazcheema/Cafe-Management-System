@@ -55,5 +55,10 @@ namespace DB_project
         {
 
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
