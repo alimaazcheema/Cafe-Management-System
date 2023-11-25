@@ -16,20 +16,46 @@ namespace DB_project
         public signup()
         {
             InitializeComponent();
-        }
-        SqlConnection conn = new SqlConnection(@"Data Source=LAPTOP-JL2TMLJA\SQLEXPRESS;Initial Catalog=CMSEatly;Integrated Security=True");
-        SqlCommand cm = new SqlCommand();
 
-        private void label1_Click(object sender, EventArgs e)
+            
+        }
+    
+
+    private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+        int cashierid = 0;
+        string Firstname = this.Fname.Text;
+        string Lastname = this.Lname.Text;
+        string username = this.user.Text;
+        string password1 = this.pass.Text;
+        string password2 = this.pass2.Text;
+        string phoneNumber = this.number.Text;
+        string connect = "Data Source=DESKTOP-SMU66TS\\SQLEXPRESS01;Initial Catalog=eatly;Integrated Security=True";
+        SqlConnection con = new SqlConnection(connect);
+        con.Open();
+        string querry = "Insert into Cashier values" + "(' " + cashierid + "', '" + 
+                Firstname + "', '" + Lastname + "', '" + username + "', '" +
+                password1 + "', '" + password2 + "', '" +
+           phoneNumber + "')";
 
+        SqlCommand cmd = new SqlCommand(querry, con);
+        int res = cmd.ExecuteNonQuery();
+        if (res > 0)
+        {
+            MessageBox.Show("Users added successfully");
+        }
+        else
+        {
+            MessageBox.Show("Error");
+        }
+        con.Close();
 
-            this.Hide();
+        this.Hide();
             Login login = new Login();
             login.Show();
 
