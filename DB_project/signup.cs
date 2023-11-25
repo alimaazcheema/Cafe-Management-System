@@ -82,7 +82,7 @@ namespace DB_project
             log.Show();
         }
 
-        private void fname(object sender, MouseEventArgs e)
+        private void fname_click(object sender, MouseEventArgs e)
         {
             this.Fname.Text = "";
         }
@@ -111,6 +111,11 @@ namespace DB_project
         private void phone(object sender, MouseEventArgs e)
         {
             this.number.Text = "";
+        }
+
+        private void Fname_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
