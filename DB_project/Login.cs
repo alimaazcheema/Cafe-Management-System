@@ -80,5 +80,10 @@ namespace DB_project
             signup sign = new signup();
             sign.Show();
         }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
