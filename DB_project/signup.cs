@@ -14,6 +14,7 @@ namespace DB_project
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Login login = new Login();
             login.Show();
 
@@ -72,6 +73,13 @@ namespace DB_project
         private void label9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            Login log = new Login();
+            log.Show();
         }
     }
 }
