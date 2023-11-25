@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace DB_project
 {
@@ -17,7 +18,7 @@ namespace DB_project
             InitializeComponent();
             
         }
-        //lklklk
+        
         private void Login_Load(object sender, EventArgs e)
         {
 

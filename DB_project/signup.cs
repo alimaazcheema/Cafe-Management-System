@@ -1,3 +1,14 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+
 namespace DB_project
 {
     public partial class signup : Form
@@ -6,6 +17,8 @@ namespace DB_project
         {
             InitializeComponent();
         }
+        SqlConnection conn = new SqlConnection(@"Data Source=LAPTOP-JL2TMLJA\SQLEXPRESS;Initial Catalog=CMSEatly;Integrated Security=True");
+        SqlCommand cm = new SqlCommand();
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -14,6 +27,8 @@ namespace DB_project
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+
             this.Hide();
             Login login = new Login();
             login.Show();
