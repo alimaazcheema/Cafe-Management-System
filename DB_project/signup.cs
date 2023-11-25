@@ -117,5 +117,15 @@ namespace DB_project
         {
 
         }
+
+        private void Fname_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Lname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

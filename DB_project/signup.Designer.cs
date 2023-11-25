@@ -112,6 +112,7 @@
             this.user.TabIndex = 6;
             this.user.Text = "Enter Username";
             this.user.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.user.MouseClick += new System.Windows.Forms.MouseEventHandler(this.username);
             this.user.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // pass
@@ -126,6 +127,7 @@
             this.pass.TabIndex = 7;
             this.pass.Text = "Enter Password";
             this.pass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.pass.MouseClick += new System.Windows.Forms.MouseEventHandler(this.password1);
             this.pass.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // panel1
@@ -162,6 +164,8 @@
             this.Fname.TabIndex = 21;
             this.Fname.Text = "Enter First Name";
             this.Fname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Fname.MouseClick += new System.Windows.Forms.MouseEventHandler(this.fname_click);
+            this.Fname.TextChanged += new System.EventHandler(this.Fname_TextChanged_1);
             // 
             // label7
             // 
@@ -186,6 +190,8 @@
             this.Lname.TabIndex = 23;
             this.Lname.Text = "Enter Last Name";
             this.Lname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Lname.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lname);
+            this.Lname.TextChanged += new System.EventHandler(this.Lname_TextChanged);
             // 
             // label5
             // 
@@ -210,6 +216,7 @@
             this.number.TabIndex = 25;
             this.number.Text = "Enter Phone Number";
             this.number.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.number.MouseClick += new System.Windows.Forms.MouseEventHandler(this.phone);
             // 
             // label8
             // 
@@ -234,6 +241,7 @@
             this.pass2.TabIndex = 27;
             this.pass2.Text = "Confirm Password ";
             this.pass2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.pass2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.password2);
             // 
             // label1
             // 
