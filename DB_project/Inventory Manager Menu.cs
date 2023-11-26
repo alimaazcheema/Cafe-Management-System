@@ -32,6 +32,11 @@ namespace DB_project
 
         }
 
+        //private void delete_item_Click(object sender, EventArgs e)
+        //{
+
+        //}
+
         private void delete_item_Click(object sender, EventArgs e)
         {
 
