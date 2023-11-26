@@ -34,6 +34,7 @@
             this.Delete_menu = new System.Windows.Forms.Button();
             this.Update_menu = new System.Windows.Forms.Button();
             this.Add_menu = new System.Windows.Forms.Button();
+            this.view_menu = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,7 +64,7 @@
             // 
             this.Create_Report.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(201)))), ((int)(((byte)(192)))));
             this.Create_Report.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Create_Report.Location = new System.Drawing.Point(409, 265);
+            this.Create_Report.Location = new System.Drawing.Point(293, 328);
             this.Create_Report.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Create_Report.Name = "Create_Report";
             this.Create_Report.Size = new System.Drawing.Size(215, 57);
@@ -76,7 +77,7 @@
             // 
             this.Delete_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(201)))), ((int)(((byte)(192)))));
             this.Delete_menu.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Delete_menu.Location = new System.Drawing.Point(176, 265);
+            this.Delete_menu.Location = new System.Drawing.Point(177, 244);
             this.Delete_menu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Delete_menu.Name = "Delete_menu";
             this.Delete_menu.Size = new System.Drawing.Size(215, 57);
@@ -89,7 +90,7 @@
             // 
             this.Update_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(201)))), ((int)(((byte)(192)))));
             this.Update_menu.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Update_menu.Location = new System.Drawing.Point(409, 182);
+            this.Update_menu.Location = new System.Drawing.Point(413, 244);
             this.Update_menu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Update_menu.Name = "Update_menu";
             this.Update_menu.Size = new System.Drawing.Size(215, 57);
@@ -102,7 +103,7 @@
             // 
             this.Add_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(201)))), ((int)(((byte)(192)))));
             this.Add_menu.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Add_menu.Location = new System.Drawing.Point(176, 182);
+            this.Add_menu.Location = new System.Drawing.Point(413, 163);
             this.Add_menu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Add_menu.Name = "Add_menu";
             this.Add_menu.Size = new System.Drawing.Size(215, 57);
@@ -111,12 +112,26 @@
             this.Add_menu.UseVisualStyleBackColor = false;
             this.Add_menu.Click += new System.EventHandler(this.add_menu);
             // 
+            // view_menu
+            // 
+            this.view_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(201)))), ((int)(((byte)(192)))));
+            this.view_menu.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.view_menu.Location = new System.Drawing.Point(177, 163);
+            this.view_menu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.view_menu.Name = "view_menu";
+            this.view_menu.Size = new System.Drawing.Size(215, 57);
+            this.view_menu.TabIndex = 43;
+            this.view_menu.Text = "View Menu Item";
+            this.view_menu.UseVisualStyleBackColor = false;
+            this.view_menu.Click += new System.EventHandler(this.view_menu_Click);
+            // 
             // Manager_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(139)))), ((int)(((byte)(116)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.view_menu);
             this.Controls.Add(this.Create_Report);
             this.Controls.Add(this.Delete_menu);
             this.Controls.Add(this.Update_menu);
@@ -138,5 +153,6 @@
         private Button Delete_menu;
         private Button Update_menu;
         private Button Add_menu;
+        private Button view_menu;
     }
 }

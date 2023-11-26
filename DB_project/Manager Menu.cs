@@ -56,5 +56,10 @@ namespace DB_project
         {
 
         }
+
+        private void view_menu_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
