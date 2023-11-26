@@ -19,47 +19,71 @@ namespace DB_project
 
             
         }
-    
 
-    private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-        int cashierid = 0;
-        string Firstname = this.Fname.Text;
-        string Lastname = this.Lname.Text;
-        string username = this.user.Text;
-        string password1 = this.pass.Text;
-        string password2 = this.pass2.Text;
-        string phoneNumber = this.number.Text;
-        string connect = "Data Source=DESKTOP-SMU66TS\\SQLEXPRESS01;Initial Catalog=eatly;Integrated Security=True";
-        SqlConnection con = new SqlConnection(connect);
-        con.Open();
-        string querry = "Insert into Cashier values" + "(' " + cashierid + "', '" + 
-                Firstname + "', '" + Lastname + "', '" + username + "', '" +
-                password1 + "', '" + password2 + "', '" +
-           phoneNumber + "')";
+            string firstname = this.Fname.Text;
+            string lastname = this.Lname.Text;
+            string username = this.user.Text;
+            string password1 = this.pass.Text;
+            string phoneNumber = this.number.Text;
+            string role = this.role.Text;
 
-        SqlCommand cmd = new SqlCommand(querry, con);
-        int res = cmd.ExecuteNonQuery();
-        if (res > 0)
-        {
-            MessageBox.Show("Users added successfully");
-        }
-        else
-        {
-            MessageBox.Show("Error");
-        }
-        con.Close();
+            // TODO: Add validation for required fields
 
-        this.Hide();
-            Login login = new Login();
-            login.Show();
+            string connect = "Data Source=DESKTOP-SMU66TS\\SQLEXPRESS01;Initial Catalog=eatly;Integrated Security=True";
+            using (SqlConnection con = new SqlConnection(connect))
+            {
+                con.Open();
+                string query;
 
+                if (role == "Customer")
+                {
+                    query = "INSERT INTO Customer (Fname, Lname, Username, Password, PhoneNumber) " +
+                            "VALUES (@Fname, @Lname, @Username, @Password, @PhoneNumber)";
+                }
+                else if (role == "Cashier")
+                {
+                    query = "INSERT INTO Cashier (Fname, Lname, Username, Password, PhoneNumber) " +
+                            "VALUES (@Fname, @Lname, @Username, @Password, @PhoneNumber)";
+                }
+                else if (role == "Manager")
+                {
+                    query = "INSERT INTO Manager (Fname, Lname, Username, Password, PhoneNumber) " +
+                            "VALUES (@Fname, @Lname, @Username, @Password, @PhoneNumber)";
+                }
+                else
+                {
+                    query = "INSERT INTO InventoryManager (Fname, Lname, Username, Password, PhoneNumber) " +
+                            "VALUES (@Fname, @Lname, @Username, @Password, @PhoneNumber)";
+                }
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@Fname", firstname);
+                    cmd.Parameters.AddWithValue("@Lname", lastname);
+                    cmd.Parameters.AddWithValue("@Username", username);
+                    cmd.Parameters.AddWithValue("@Password", password1);
+                    cmd.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
+
+                    int res = cmd.ExecuteNonQuery();
+                    if (res > 0)
+                    {
+                        MessageBox.Show("User added successfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error");
+                    }
+                }
+
+                this.Hide();
+                Login login = new Login();
+                login.Show();
+            }
         }
+
 
         private void label3_Click(object sender, EventArgs e)
         {
