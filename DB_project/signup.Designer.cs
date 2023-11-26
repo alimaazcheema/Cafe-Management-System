@@ -48,7 +48,7 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label10 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.role = new System.Windows.Forms.ComboBox();
+            this.roleBtn = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -298,19 +298,19 @@
             this.linkLabel2.Text = "Log In";
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
-            // role
+            // roleBtn
             // 
-            this.role.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(201)))), ((int)(((byte)(192)))));
-            this.role.FormattingEnabled = true;
-            this.role.Items.AddRange(new object[] {
+            this.roleBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(201)))), ((int)(((byte)(192)))));
+            this.roleBtn.FormattingEnabled = true;
+            this.roleBtn.Items.AddRange(new object[] {
             "Customer",
             "Cashier",
             "Manager",
             "Inventory Manager"});
-            this.role.Location = new System.Drawing.Point(619, 148);
-            this.role.Name = "role";
-            this.role.Size = new System.Drawing.Size(116, 23);
-            this.role.TabIndex = 32;
+            this.roleBtn.Location = new System.Drawing.Point(619, 148);
+            this.roleBtn.Name = "roleBtn";
+            this.roleBtn.Size = new System.Drawing.Size(116, 23);
+            this.roleBtn.TabIndex = 32;
             // 
             // label11
             // 
@@ -330,7 +330,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(139)))), ((int)(((byte)(116)))));
             this.ClientSize = new System.Drawing.Size(800, 471);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.role);
+            this.Controls.Add(this.roleBtn);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.linkLabel1);
@@ -382,7 +382,7 @@
         private LinkLabel linkLabel1;
         private Label label10;
         private LinkLabel linkLabel2;
-        private ComboBox role;
+        private ComboBox roleBtn;
         private Label label11;
     }
 }

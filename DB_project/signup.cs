@@ -17,7 +17,7 @@ namespace DB_project
         {
             InitializeComponent();
 
-            
+
         }
 
 
@@ -28,7 +28,7 @@ namespace DB_project
             string username = this.user.Text;
             string password1 = this.pass.Text;
             string phoneNumber = this.number.Text;
-            string role = this.role.Text;
+            string role = roleBtn.Text;
 
             // TODO: Add validation for required fields
 
@@ -37,52 +37,69 @@ namespace DB_project
             {
                 con.Open();
                 string query;
+                string queryID = "select top 1 CustomerID from Customer order by CustomerID desc";
+                SqlCommand cm = new SqlCommand(queryID, con);
+                int custID = Convert.ToInt32(cm.ExecuteScalar());
+                custID++;
 
                 if (role == "Customer")
                 {
-                    query = "INSERT INTO Customer (Fname, Lname, Username, Password, PhoneNumber) " +
-                            "VALUES (@Fname, @Lname, @Username, @Password, @PhoneNumber)";
+                    query = "INSERT INTO Customer (CustomerID,Fname, Lname, Username, Password, PhoneNumber) " +
+                            "VALUES (@custID,@Fname, @Lname, @Username, @Password, @PhoneNumber);" +
+                            "SELECT SCOPE_IDENTITY();";
                 }
                 else if (role == "Cashier")
                 {
                     query = "INSERT INTO Cashier (Fname, Lname, Username, Password, PhoneNumber) " +
-                            "VALUES (@Fname, @Lname, @Username, @Password, @PhoneNumber)";
+                            "VALUES (@Fname, @Lname, @Username, @Password, @PhoneNumber);" +
+                            "SELECT SCOPE_IDENTITY();";
                 }
                 else if (role == "Manager")
                 {
                     query = "INSERT INTO Manager (Fname, Lname, Username, Password, PhoneNumber) " +
-                            "VALUES (@Fname, @Lname, @Username, @Password, @PhoneNumber)";
+                            "VALUES (@Fname, @Lname, @Username, @Password, @PhoneNumber);" +
+                            "SELECT SCOPE_IDENTITY();";
                 }
                 else
                 {
                     query = "INSERT INTO InventoryManager (Fname, Lname, Username, Password, PhoneNumber) " +
-                            "VALUES (@Fname, @Lname, @Username, @Password, @PhoneNumber)";
+                            "VALUES (@Fname, @Lname, @Username, @Password, @PhoneNumber);" +
+                            "SELECT SCOPE_IDENTITY();";
                 }
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@custID", custID);
+                cmd.Parameters.AddWithValue("@Fname", firstname);
+                cmd.Parameters.AddWithValue("@Lname", lastname);
+                cmd.Parameters.AddWithValue("@Username", username);
+                cmd.Parameters.AddWithValue("@Password", password1);
+                cmd.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
 
-                using (SqlCommand cmd = new SqlCommand(query, con))
+                // Use ExecuteScalar to get the generated identity value
+                int result = cmd.ExecuteNonQuery();
+                Console.WriteLine(result);
+
+                if (result > 0)
                 {
-                    cmd.Parameters.AddWithValue("@Fname", firstname);
-                    cmd.Parameters.AddWithValue("@Lname", lastname);
-                    cmd.Parameters.AddWithValue("@Username", username);
-                    cmd.Parameters.AddWithValue("@Password", password1);
-                    cmd.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
-
-                    int res = cmd.ExecuteNonQuery();
-                    if (res > 0)
-                    {
-                        MessageBox.Show("User added successfully");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error");
-                    }
+                    MessageBox.Show($"User added successfully");
+                }
+                else
+                {
+                    MessageBox.Show("Error");
                 }
 
-                this.Hide();
-                Login login = new Login();
-                login.Show();
             }
+
+            this.Hide();
+            Login login = new Login();
+            login.Show();
         }
+
+
+
+
+
+
+
 
 
         private void label3_Click(object sender, EventArgs e)
@@ -200,7 +217,7 @@ namespace DB_project
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Login log=new Login();
+            Login log = new Login();
             log.Show();
         }
     }
