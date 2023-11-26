@@ -30,63 +30,97 @@ namespace DB_project
             string phoneNumber = this.number.Text;
             string role = roleBtn.Text;
 
-            // TODO: Add validation for required fields
 
-            string connect = "Data Source=DESKTOP-SMU66TS\\SQLEXPRESS01;Initial Catalog=eatly;Integrated Security=True";
-            using (SqlConnection con = new SqlConnection(connect))
+            if (pass.Text != pass2.Text)
             {
-                con.Open();
-                string query;
-                string queryID = "select top 1 CustomerID from Customer order by CustomerID desc";
-                SqlCommand cm = new SqlCommand(queryID, con);
-                int custID = Convert.ToInt32(cm.ExecuteScalar());
-                custID++;
+                MessageBox.Show($"Passwords do not match");
+            }
+            else
+            {
 
-                if (role == "Customer")
-                {
-                    query = "INSERT INTO Customer (CustomerID,Fname, Lname, Username, Password, PhoneNumber) " +
-                            "VALUES (@custID,@Fname, @Lname, @Username, @Password, @PhoneNumber);" +
-                            "SELECT SCOPE_IDENTITY();";
-                }
-                else if (role == "Cashier")
-                {
-                    query = "INSERT INTO Cashier (Fname, Lname, Username, Password, PhoneNumber) " +
-                            "VALUES (@Fname, @Lname, @Username, @Password, @PhoneNumber);" +
-                            "SELECT SCOPE_IDENTITY();";
-                }
-                else if (role == "Manager")
-                {
-                    query = "INSERT INTO Manager (Fname, Lname, Username, Password, PhoneNumber) " +
-                            "VALUES (@Fname, @Lname, @Username, @Password, @PhoneNumber);" +
-                            "SELECT SCOPE_IDENTITY();";
-                }
-                else
-                {
-                    query = "INSERT INTO InventoryManager (Fname, Lname, Username, Password, PhoneNumber) " +
-                            "VALUES (@Fname, @Lname, @Username, @Password, @PhoneNumber);" +
-                            "SELECT SCOPE_IDENTITY();";
-                }
-                SqlCommand cmd = new SqlCommand(query, con);
-                cmd.Parameters.AddWithValue("@custID", custID);
-                cmd.Parameters.AddWithValue("@Fname", firstname);
-                cmd.Parameters.AddWithValue("@Lname", lastname);
-                cmd.Parameters.AddWithValue("@Username", username);
-                cmd.Parameters.AddWithValue("@Password", password1);
-                cmd.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
 
-                // Use ExecuteScalar to get the generated identity value
-                int result = cmd.ExecuteNonQuery();
-                Console.WriteLine(result);
-
-                if (result > 0)
+                // TODO: Add validation for required fields
+                // connecting to sql and writing data in that
+                string connect = "Data Source=DESKTOP-SMU66TS\\SQLEXPRESS01;Initial Catalog=eatly;Integrated Security=True";
+                using (SqlConnection con = new SqlConnection(connect))
                 {
-                    MessageBox.Show($"User added successfully");
-                }
-                else
-                {
-                    MessageBox.Show("Error");
-                }
+                    con.Open();
+                    string query;
+                    string queryID;
+                    int custID = 0;
+                    int cashierID = 0;
+                    int mgrID = 0;
+                    int invmgrID = 0;
 
+
+                    if (role == "Customer")
+                    {
+                        queryID = "select top 1 CustomerID from Customer order by CustomerID desc";
+                        SqlCommand cm = new SqlCommand(queryID, con);
+                        custID = Convert.ToInt32(cm.ExecuteScalar());
+
+                        custID++;
+                        query = "INSERT INTO Customer (CustomerID,Fname, Lname, Username, Password, PhoneNumber) " +
+                                "VALUES (@custID,@Fname, @Lname, @Username, @Password, @PhoneNumber);" +
+                                "SELECT SCOPE_IDENTITY();";
+                    }
+                    else if (role == "Cashier")
+                    {
+                        queryID = "select top 1 CashierID from Cashier order by CashierID desc";
+                        SqlCommand cm = new SqlCommand(queryID, con);
+                        cashierID = Convert.ToInt32(cm.ExecuteScalar());
+                        cashierID++;
+                        query = "INSERT INTO Cashier (CashierID,Fname, Lname, Username, Password, PhoneNumber) " +
+                                "VALUES (@cashierID,@Fname, @Lname, @Username, @Password, @PhoneNumber);" +
+                                "SELECT SCOPE_IDENTITY();";
+                    }
+                    else if (role == "Manager")
+                    {
+                        queryID = "select top 1 ManagerID from Managers order by ManagerID desc";
+                        SqlCommand cm = new SqlCommand(queryID, con);
+                        mgrID = Convert.ToInt32(cm.ExecuteScalar());
+                        mgrID++;
+                        query = "INSERT INTO Manager (ManagerID,Fname, Lname, Username, Password, PhoneNumber) " +
+                                "VALUES (@mgrID,@Fname, @Lname, @Username, @Password, @PhoneNumber);" +
+                                "SELECT SCOPE_IDENTITY();";
+                    }
+                    else
+                    {
+                        queryID = "select top 1 ManagerID from InventoryManager order by ManagerID desc";
+                        SqlCommand cm = new SqlCommand(queryID, con);
+                        invmgrID = Convert.ToInt32(cm.ExecuteScalar());
+                        invmgrID++;
+                        query = "INSERT INTO InventoryManager (ManagerID, Fname, Lname, Username, Password, PhoneNumber) " +
+                                "VALUES (@invmgrID, @Fname, @Lname, @Username, @Password, @PhoneNumber);" +
+                                "SELECT SCOPE_IDENTITY();";
+                    }
+
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@custID", custID);
+                    cmd.Parameters.AddWithValue("@cashierID", cashierID);
+                    cmd.Parameters.AddWithValue("@mgrID", mgrID);
+                    cmd.Parameters.AddWithValue("@invmgrID", invmgrID);
+
+                    cmd.Parameters.AddWithValue("@Fname", firstname);
+                    cmd.Parameters.AddWithValue("@Lname", lastname);
+                    cmd.Parameters.AddWithValue("@Username", username);
+                    cmd.Parameters.AddWithValue("@Password", password1);
+                    cmd.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
+
+                    // Use ExecuteScalar to get the generated identity value
+                    int result = cmd.ExecuteNonQuery();
+                    Console.WriteLine(result);
+
+                    if (result > 0)
+                    {
+                        MessageBox.Show($"User added successfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error");
+                    }
+
+                }
             }
 
             this.Hide();
