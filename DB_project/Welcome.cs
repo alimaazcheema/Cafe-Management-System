@@ -22,28 +22,14 @@ namespace DB_project
 
         }
 
-        private void Customer_Click(object sender, EventArgs e)
+        private void login_button_Click(object sender, EventArgs e)
         {
             this.Hide();
             signup sign = new signup();
             sign.Show();
         }
 
-        private void Cashier_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            signup sign = new signup();
-            sign.Show();
-        }
-
-        private void Manager_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            signup sign = new signup();
-            sign.Show();
-        }
-
-        private void Inventory_Click(object sender, EventArgs e)
+        private void signup_button_Click(object sender, EventArgs e)
         {
             this.Hide();
             signup sign = new signup();

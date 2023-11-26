@@ -137,6 +137,7 @@
             this.Fname.TabIndex = 45;
             this.Fname.Text = "Enter Name";
             this.Fname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Fname.TextChanged += new System.EventHandler(this.Fname_TextChanged);
             // 
             // desc_box
             // 

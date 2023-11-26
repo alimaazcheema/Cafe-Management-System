@@ -56,5 +56,10 @@ namespace DB_project
         {
 
         }
+
+        private void Fname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
