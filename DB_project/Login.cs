@@ -86,5 +86,10 @@ namespace DB_project
         {
 
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

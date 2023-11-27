@@ -251,6 +251,7 @@ namespace DB_project
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.Hide();
             Login log = new Login();
             log.Show();
         }
