@@ -61,5 +61,32 @@ namespace DB_project
         {
 
         }
+
+        private void add_button_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Manager_Menu mngr = new Manager_Menu();
+            mngr.Show();
+        }
+
+        private void namee(object sender, MouseEventArgs e)
+        {
+            this.name.Text = "";
+        }
+
+        private void desc(object sender, MouseEventArgs e)
+        {
+            this.desc_box.Text = "";
+        }
+
+        private void price(object sender, MouseEventArgs e)
+        {
+            this.price_box.Text = "";
+        }
+
+        private void info(object sender, MouseEventArgs e)
+        {
+            this.info_box.Text = "";
+        }
     }
 }

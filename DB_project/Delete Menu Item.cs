@@ -21,5 +21,17 @@ namespace DB_project
         {
 
         }
+
+        private void delete_button_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Manager_Menu menu = new Manager_Menu();
+            menu.Show();
+        }
+
+        private void name(object sender, MouseEventArgs e)
+        {
+            this.textBox1.Text = "";
+        }
     }
 }

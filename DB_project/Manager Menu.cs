@@ -39,27 +39,35 @@ namespace DB_project
 
         private void add_menu(object sender, EventArgs e)
         {
-
+            Add_Menu_Item menu_item = new Add_Menu_Item();
+            menu_item.Show();
         }
 
         private void update_menu(object sender, EventArgs e)
         {
+            this.Hide();
+            Update_Menu_Item update = new Update_Menu_Item();
+            update.Show();
 
         }
 
         private void delete_menu(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Delete_Menu_Item del = new Delete_Menu_Item();
+            del.Show();
         }
 
         private void create_report(object sender, EventArgs e)
         {
-
+            this.Hide();
         }
 
         private void view_menu_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Menu men = new Menu();
+            men.Show();
         }
     }
 }
