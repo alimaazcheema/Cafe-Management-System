@@ -41,10 +41,10 @@ namespace DB_project
 
                 // TODO: Add validation for required fields
                 // connecting to sql and writing data in that
-                // string connect = "Data Source=DESKTOP-SMU66TS\\SQLEXPRESS01;Initial Catalog=eatly;Integrated Security=True";
-              //  string connect = "Data Source =LAPTOP-JL2TMLJA\SQLEXPRESS; Initial Catalog = CMSEATLYDB; Integrated Security = True";
-                using (SqlConnection con = new SqlConnection(@"Data Source =LAPTOP-JL2TMLJA\SQLEXPRESS; Initial Catalog = CMSEATLYDB; Integrated Security = True"))
-                {
+                 string connect = "Data Source=DESKTOP-SMU66TS\\SQLEXPRESS01;Initial Catalog=eatly;Integrated Security=True";
+                //  string connect = "Data Source =LAPTOP-JL2TMLJA\SQLEXPRESS; Initial Catalog = CMSEATLYDB; Integrated Security = True";
+                SqlConnection con = new SqlConnection(connect);
+                
                     con.Open();
                     string query;
                     string queryID;
@@ -60,11 +60,11 @@ namespace DB_project
                     if (role == "Customer")
                     {
                         queryID = "select top 1 CustomerID from Customer order by CustomerID desc";
-                         cm = new SqlCommand(queryID, con);
+                        cm = new SqlCommand(queryID, con);
                         custID = Convert.ToInt32(cm.ExecuteScalar());
 
                         custID++;
-                       
+
                         query = "INSERT INTO Customer (Fname, Lname, Username, Password, PhoneNumber) " +
                                 "VALUES (@Fname, @Lname, @Username, @Password, @PhoneNumber);" +
                                 "SELECT SCOPE_IDENTITY();";
@@ -72,10 +72,10 @@ namespace DB_project
                     else if (role == "Cashier")
                     {
                         queryID = "select top 1 CashierID from Cashier order by CashierID desc";
-                         cm = new SqlCommand(queryID, con);
+                        cm = new SqlCommand(queryID, con);
                         cashierID = Convert.ToInt32(cm.ExecuteScalar());
                         cashierID++;
-                       
+
                         query = "INSERT INTO Cashier (Fname, Lname, Username, Password, PhoneNumber) " +
                                 "VALUES (@Fname, @Lname, @Username, @Password, @PhoneNumber);" +
                                 "SELECT SCOPE_IDENTITY();";
@@ -83,10 +83,10 @@ namespace DB_project
                     else if (role == "Manager")
                     {
                         queryID = "select top 1 ManagerID from Manager order by ManagerID desc";
-                         cm = new SqlCommand(queryID, con);
+                        cm = new SqlCommand(queryID, con);
                         mgrID = Convert.ToInt32(cm.ExecuteScalar());
                         mgrID++;
-                       
+
                         query = "INSERT INTO Manager (Fname, Lname, Username, Password, PhoneNumber) " +
                                 "VALUES (@Fname, @Lname, @Username, @Password, @PhoneNumber);" +
                                 "SELECT SCOPE_IDENTITY();";
@@ -94,10 +94,10 @@ namespace DB_project
                     else
                     {
                         queryID = "select top 1 ManagerID from InventoryManager order by ManagerID desc";
-                         cm = new SqlCommand(queryID, con);
+                        cm = new SqlCommand(queryID, con);
                         invmgrID = Convert.ToInt32(cm.ExecuteScalar());
                         invmgrID++;
-                        
+
                         query = "INSERT INTO InventoryManager ( Fname, Lname, Username, Password, PhoneNumber) " +
                                 "VALUES ( @Fname, @Lname, @Username, @Password, @PhoneNumber);" +
                                 "SELECT SCOPE_IDENTITY();";
@@ -137,7 +137,7 @@ namespace DB_project
                     cmd.Parameters.AddWithValue("@Username", username);
                     cmd.Parameters.AddWithValue("@Password", password1);
                     cmd.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
-                   // cmd.Parameters.AddWithValue("@Role", role);
+                    // cmd.Parameters.AddWithValue("@Role", role);
 
                     // Use ExecuteScalar to get the generated identity value
                     int result = cmd.ExecuteNonQuery();
@@ -155,7 +155,7 @@ namespace DB_project
                     }
 
                 }
-            }
+            
 
             this.Hide();
             Login login = new Login();

@@ -66,8 +66,45 @@ namespace DB_project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //dashboard dash = new dashboard();
-            //dash.Show();
+            string username = this.user.Text;
+            string password = this.pass.Text;
+            string role;
+            string queryID;
+
+            string connect = "Data Source=DESKTOP-SMU66TS\\SQLEXPRESS01;Initial Catalog=eatly;Integrated Security=True";
+            SqlConnection con = new SqlConnection(connect);
+
+            con.Open();
+
+            SqlCommand cm; queryID = "select Role from Userr Where username = @user AND password = @pass";
+            cm = new SqlCommand(queryID, con);
+            role = cm.ExecuteScalar() as String;
+            if (role == "Customer")
+            {
+                this.Hide();
+                Customer_Menu cust = new Customer_Menu();
+                cust.Show();
+            }
+            else if (role == "Cashier")
+            {
+                this.Hide();
+                Cashier_Menu cash = new Cashier_Menu();
+                cash.Show();
+            }
+            else if (role == "Manager")
+            {
+                this.Hide();
+                Manager_Menu mgr = new Manager_Menu();
+                mgr.Show();
+            }
+            else
+            {
+                this.Hide();
+                Inventory_Manager_Menu Inv = new Inventory_Manager_Menu();
+                Inv.Show();
+
+                this.Hide();
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -90,6 +127,16 @@ namespace DB_project
         private void label9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void username(object sender, MouseEventArgs e)
+        {
+            this.user.Text = "";
+        }
+
+        private void password(object sender, MouseEventArgs e)
+        {
+            this.pass.Text = "";
         }
     }
 }
