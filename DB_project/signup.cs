@@ -51,15 +51,19 @@ namespace DB_project
                     int cashierID = 0;
                     int mgrID = 0;
                     int invmgrID = 0;
+                    int userID = 0;
+
+                    SqlCommand cm;
 
 
                     if (role == "Customer")
                     {
                         queryID = "select top 1 CustomerID from Customer order by CustomerID desc";
-                        SqlCommand cm = new SqlCommand(queryID, con);
+                         cm = new SqlCommand(queryID, con);
                         custID = Convert.ToInt32(cm.ExecuteScalar());
 
                         custID++;
+                       
                         query = "INSERT INTO Customer (CustomerID,Fname, Lname, Username, Password, PhoneNumber) " +
                                 "VALUES (@custID,@Fname, @Lname, @Username, @Password, @PhoneNumber);" +
                                 "SELECT SCOPE_IDENTITY();";
@@ -67,19 +71,21 @@ namespace DB_project
                     else if (role == "Cashier")
                     {
                         queryID = "select top 1 CashierID from Cashier order by CashierID desc";
-                        SqlCommand cm = new SqlCommand(queryID, con);
+                         cm = new SqlCommand(queryID, con);
                         cashierID = Convert.ToInt32(cm.ExecuteScalar());
                         cashierID++;
+                       
                         query = "INSERT INTO Cashier (CashierID,Fname, Lname, Username, Password, PhoneNumber) " +
                                 "VALUES (@cashierID,@Fname, @Lname, @Username, @Password, @PhoneNumber);" +
                                 "SELECT SCOPE_IDENTITY();";
                     }
                     else if (role == "Manager")
                     {
-                        queryID = "select top 1 ManagerID from Managers order by ManagerID desc";
-                        SqlCommand cm = new SqlCommand(queryID, con);
+                        queryID = "select top 1 ManagerID from Manager order by ManagerID desc";
+                         cm = new SqlCommand(queryID, con);
                         mgrID = Convert.ToInt32(cm.ExecuteScalar());
                         mgrID++;
+                       
                         query = "INSERT INTO Manager (ManagerID,Fname, Lname, Username, Password, PhoneNumber) " +
                                 "VALUES (@mgrID,@Fname, @Lname, @Username, @Password, @PhoneNumber);" +
                                 "SELECT SCOPE_IDENTITY();";
@@ -87,28 +93,55 @@ namespace DB_project
                     else
                     {
                         queryID = "select top 1 ManagerID from InventoryManager order by ManagerID desc";
-                        SqlCommand cm = new SqlCommand(queryID, con);
+                         cm = new SqlCommand(queryID, con);
                         invmgrID = Convert.ToInt32(cm.ExecuteScalar());
                         invmgrID++;
+                        
                         query = "INSERT INTO InventoryManager (ManagerID, Fname, Lname, Username, Password, PhoneNumber) " +
                                 "VALUES (@invmgrID, @Fname, @Lname, @Username, @Password, @PhoneNumber);" +
                                 "SELECT SCOPE_IDENTITY();";
                     }
+
+                    queryID = "select top 1 UserID from Userr order by UserID desc";
+                    cm = new SqlCommand(queryID, con);
+                    userID = Convert.ToInt32(cm.ExecuteScalar());
+                    userID++;
+
+                    string queryyy;
+                    // Insert into Userr table to get the generated userID
+                    queryyy = "INSERT INTO Userr (UserID, Username, Password, Role) " +
+                            "VALUES (@UserID, @Username, @Password, @Role);";
+
+                    cm = new SqlCommand(queryyy, con);
+
+                    // Set parameters for the Userr table
+                    cm.Parameters.AddWithValue("@Userid", userID);
+                    cm.Parameters.AddWithValue("@Username", username);
+                    cm.Parameters.AddWithValue("@Password", password1);
+                    cm.Parameters.AddWithValue("@Role", role);
+
+
+
+
 
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@custID", custID);
                     cmd.Parameters.AddWithValue("@cashierID", cashierID);
                     cmd.Parameters.AddWithValue("@mgrID", mgrID);
                     cmd.Parameters.AddWithValue("@invmgrID", invmgrID);
+                    //cmd.Parameters.AddWithValue("@Userid", userID);
 
                     cmd.Parameters.AddWithValue("@Fname", firstname);
                     cmd.Parameters.AddWithValue("@Lname", lastname);
                     cmd.Parameters.AddWithValue("@Username", username);
                     cmd.Parameters.AddWithValue("@Password", password1);
                     cmd.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
+                   // cmd.Parameters.AddWithValue("@Role", role);
 
                     // Use ExecuteScalar to get the generated identity value
                     int result = cmd.ExecuteNonQuery();
+                    int result2 = cm.ExecuteNonQuery();
+
                     Console.WriteLine(result);
 
                     if (result > 0)
