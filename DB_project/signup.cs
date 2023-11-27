@@ -41,8 +41,9 @@ namespace DB_project
 
                 // TODO: Add validation for required fields
                 // connecting to sql and writing data in that
-                string connect = "Data Source=DESKTOP-SMU66TS\\SQLEXPRESS01;Initial Catalog=eatly;Integrated Security=True";
-                using (SqlConnection con = new SqlConnection(connect))
+                // string connect = "Data Source=DESKTOP-SMU66TS\\SQLEXPRESS01;Initial Catalog=eatly;Integrated Security=True";
+              //  string connect = "Data Source =LAPTOP-JL2TMLJA\SQLEXPRESS; Initial Catalog = CMSEATLYDB; Integrated Security = True";
+                using (SqlConnection con = new SqlConnection(@"Data Source =LAPTOP-JL2TMLJA\SQLEXPRESS; Initial Catalog = CMSEATLYDB; Integrated Security = True"))
                 {
                     con.Open();
                     string query;
@@ -64,8 +65,8 @@ namespace DB_project
 
                         custID++;
                        
-                        query = "INSERT INTO Customer (CustomerID,Fname, Lname, Username, Password, PhoneNumber) " +
-                                "VALUES (@custID,@Fname, @Lname, @Username, @Password, @PhoneNumber);" +
+                        query = "INSERT INTO Customer (Fname, Lname, Username, Password, PhoneNumber) " +
+                                "VALUES (@Fname, @Lname, @Username, @Password, @PhoneNumber);" +
                                 "SELECT SCOPE_IDENTITY();";
                     }
                     else if (role == "Cashier")
@@ -75,8 +76,8 @@ namespace DB_project
                         cashierID = Convert.ToInt32(cm.ExecuteScalar());
                         cashierID++;
                        
-                        query = "INSERT INTO Cashier (CashierID,Fname, Lname, Username, Password, PhoneNumber) " +
-                                "VALUES (@cashierID,@Fname, @Lname, @Username, @Password, @PhoneNumber);" +
+                        query = "INSERT INTO Cashier (Fname, Lname, Username, Password, PhoneNumber) " +
+                                "VALUES (@Fname, @Lname, @Username, @Password, @PhoneNumber);" +
                                 "SELECT SCOPE_IDENTITY();";
                     }
                     else if (role == "Manager")
@@ -86,8 +87,8 @@ namespace DB_project
                         mgrID = Convert.ToInt32(cm.ExecuteScalar());
                         mgrID++;
                        
-                        query = "INSERT INTO Manager (ManagerID,Fname, Lname, Username, Password, PhoneNumber) " +
-                                "VALUES (@mgrID,@Fname, @Lname, @Username, @Password, @PhoneNumber);" +
+                        query = "INSERT INTO Manager (Fname, Lname, Username, Password, PhoneNumber) " +
+                                "VALUES (@Fname, @Lname, @Username, @Password, @PhoneNumber);" +
                                 "SELECT SCOPE_IDENTITY();";
                     }
                     else
@@ -97,8 +98,8 @@ namespace DB_project
                         invmgrID = Convert.ToInt32(cm.ExecuteScalar());
                         invmgrID++;
                         
-                        query = "INSERT INTO InventoryManager (ManagerID, Fname, Lname, Username, Password, PhoneNumber) " +
-                                "VALUES (@invmgrID, @Fname, @Lname, @Username, @Password, @PhoneNumber);" +
+                        query = "INSERT INTO InventoryManager ( Fname, Lname, Username, Password, PhoneNumber) " +
+                                "VALUES ( @Fname, @Lname, @Username, @Password, @PhoneNumber);" +
                                 "SELECT SCOPE_IDENTITY();";
                     }
 

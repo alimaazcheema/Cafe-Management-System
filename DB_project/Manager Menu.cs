@@ -39,6 +39,7 @@ namespace DB_project
 
         private void add_menu(object sender, EventArgs e)
         {
+            this.Hide();
             Add_Menu_Item menu_item = new Add_Menu_Item();
             menu_item.Show();
         }
@@ -66,7 +67,7 @@ namespace DB_project
         private void view_menu_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Menu men = new Menu();
+            View_Menu_Item men = new View_Menu_Item();
             men.Show();
         }
     }
