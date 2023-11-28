@@ -25,7 +25,7 @@ namespace DB_project
         private void login_button_Click(object sender, EventArgs e)
         {
             this.Hide();
-            signup sign = new signup();
+            Login sign = new Login();
             sign.Show();
         }
 

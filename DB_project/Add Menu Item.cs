@@ -65,9 +65,7 @@ namespace DB_project
 
         private void add_button_Click(object sender, EventArgs e)
         {
-            // this.Hide();
-            // Manager_Menu mngr = new Manager_Menu();
-            // mngr.Show();
+           
 
             string name = this.name.Text;
             string description = this.desc_box.Text;
@@ -100,6 +98,10 @@ namespace DB_project
                 MessageBox.Show("Item not added.", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             con.Close();
+
+            this.Hide();
+            Manager_Menu mngr = new Manager_Menu();
+            mngr.Show();
 
         }
 

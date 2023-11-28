@@ -19,17 +19,23 @@ namespace DB_project
 
         private void update_item_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Update_Inventory temp = new Update_Inventory();
+            temp.Show();
         }
 
         private void view_item_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            View_Inventory temp = new View_Inventory();
+            temp.Show();
         }
 
         private void add_item_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Add_Inventory temp = new Add_Inventory();
+            temp.Show();
         }
 
         //private void delete_item_Click(object sender, EventArgs e)
@@ -39,7 +45,9 @@ namespace DB_project
 
         private void delete_item_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Delete_Inevntory temp = new Delete_Inevntory();
+            temp.Show();
         }
     }
 }
