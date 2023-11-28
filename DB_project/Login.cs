@@ -68,44 +68,64 @@ namespace DB_project
         {
             string username = this.user.Text;
             string password = this.pass.Text;
-            string role;
-            string queryID;
+            string role = "";
 
             string connect = "Data Source=DESKTOP-SMU66TS\\SQLEXPRESS01;Initial Catalog=eatly;Integrated Security=True";
-            SqlConnection con = new SqlConnection(connect);
 
-            con.Open();
+            using (SqlConnection con = new SqlConnection(connect))
+            {
+                con.Open();
 
-            SqlCommand cm; queryID = "select Role from Userr Where username = @user AND password = @pass";
-            cm = new SqlCommand(queryID, con);
-            role = cm.ExecuteScalar() as String;
-            if (role == "Customer")
-            {
-                this.Hide();
-                Customer_Menu cust = new Customer_Menu();
-                cust.Show();
-            }
-            else if (role == "Cashier")
-            {
-                this.Hide();
-                Cashier_Menu cash = new Cashier_Menu();
-                cash.Show();
-            }
-            else if (role == "Manager")
-            {
-                this.Hide();
-                Manager_Menu mgr = new Manager_Menu();
-                mgr.Show();
-            }
-            else
-            {
-                this.Hide();
-                Inventory_Manager_Menu Inv = new Inventory_Manager_Menu();
-                Inv.Show();
+                string queryID = "SELECT Role FROM Userr WHERE username = @user AND password = @pass";
 
-                this.Hide();
+                using (SqlCommand cmd = new SqlCommand(queryID, con))
+                {
+                    cmd.Parameters.AddWithValue("@user", username);
+                    cmd.Parameters.AddWithValue("@pass", password);
+
+                    // Use ExecuteScalar safely with null check
+                    object result = cmd.ExecuteScalar();
+
+                    if (result != null)
+                    {
+                        role = result.ToString();
+
+                        // Handle different roles
+                        switch (role)
+                        {
+                            case "Customer":
+                                this.Hide();
+                                Customer_Menu cust = new Customer_Menu();
+                                cust.Show();
+                                break;
+
+                            case "Cashier":
+                                this.Hide();
+                                Cashier_Menu cash = new Cashier_Menu();
+                                cash.Show();
+                                break;
+
+                            case "Manager":
+                                this.Hide();
+                                Manager_Menu mgr = new Manager_Menu();
+                                mgr.Show();
+                                break;
+
+                            default:
+                                this.Hide();
+                                Inventory_Manager_Menu inv = new Inventory_Manager_Menu();
+                                inv.Show();
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid username or password");
+                    }
+                }
             }
         }
+
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {

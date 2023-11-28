@@ -74,7 +74,7 @@ namespace DB_project
                         queryID = "select top 1 CashierID from Cashier order by CashierID desc";
                         cm = new SqlCommand(queryID, con);
                         cashierID = Convert.ToInt32(cm.ExecuteScalar());
-                        cashierID++;
+                    cashierID++;
 
                         query = "INSERT INTO Cashier (Fname, Lname, Username, Password, PhoneNumber) " +
                                 "VALUES (@Fname, @Lname, @Username, @Password, @PhoneNumber);" +
