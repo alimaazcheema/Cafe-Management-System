@@ -162,14 +162,6 @@ namespace DB_project
             login.Show();
         }
 
-
-
-
-
-
-
-
-
         private void label3_Click(object sender, EventArgs e)
         {
 
