@@ -71,8 +71,9 @@ namespace DB_project
             string role = "";
 
             string connect = "Data Source=DESKTOP-SMU66TS\\SQLEXPRESS01;Initial Catalog=eatly;Integrated Security=True";
-
-            using (SqlConnection con = new SqlConnection(connect))
+           
+           // using (SqlConnection con = new SqlConnection(connect))
+           using (SqlConnection con = new SqlConnection(@"Data Source =LAPTOP-JL2TMLJA\SQLEXPRESS; Initial Catalog = CMSEATLYDB; Integrated Security = True"))
             {
                 con.Open();
 

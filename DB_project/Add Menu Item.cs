@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace DB_project
 {
@@ -64,9 +65,42 @@ namespace DB_project
 
         private void add_button_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Manager_Menu mngr = new Manager_Menu();
-            mngr.Show();
+            // this.Hide();
+            // Manager_Menu mngr = new Manager_Menu();
+            // mngr.Show();
+
+            string name = this.name.Text;
+            string description = this.desc_box.Text;
+            int price = Convert.ToInt32(this.price_box.Text);
+            string information = this.info_box.Text;
+            string ID = category_roleBtn.Text;
+            int categoryID = Convert.ToInt32(ID[0])-48;
+
+            SqlConnection con = new SqlConnection(@"Data Source =LAPTOP-JL2TMLJA\SQLEXPRESS; Initial Catalog = CMSEATLYDB; Integrated Security = True");
+            con.Open();
+            string query;
+            query = "insert into MenuItem values(@name,@description,@price,@info,@categoryID)";
+
+            SqlCommand cm = new SqlCommand(query, con);
+            cm.Parameters.AddWithValue("@name", name);
+            cm.Parameters.AddWithValue("@description", description);
+            cm.Parameters.AddWithValue("@price", price);
+            cm.Parameters.AddWithValue("@info", information);
+            cm.Parameters.AddWithValue("@categoryID", categoryID);
+
+            int result = cm.ExecuteNonQuery();
+
+            if(result>0)
+            {
+                // MessageBox.Show($"");
+                MessageBox.Show("Item added successfully.", "Success",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                MessageBox.Show("Item not added.", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            con.Close();
+
         }
 
         private void namee(object sender, MouseEventArgs e)
