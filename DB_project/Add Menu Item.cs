@@ -92,10 +92,17 @@ namespace DB_project
             {
                 // MessageBox.Show($"");
                 MessageBox.Show("Item added successfully.", "Success",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                this.Hide();
+                Manager_Menu menu = new Manager_Menu();
+                menu.Show();
+
             }
             else
             {
                 MessageBox.Show("Item not added.", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Hide();
+                Manager_Menu menu = new Manager_Menu();
+                menu.Show();
             }
             con.Close();
 

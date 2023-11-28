@@ -62,6 +62,8 @@ namespace DB_project
         private void create_report(object sender, EventArgs e)
         {
             this.Hide();
+            View_all_Menu_Items view=new View_all_Menu_Items();
+            view.Show();
         }
 
         private void view_menu_Click(object sender, EventArgs e)
