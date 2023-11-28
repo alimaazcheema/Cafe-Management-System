@@ -30,12 +30,12 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.pass = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.user = new System.Windows.Forms.TextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -46,10 +46,9 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(113)))), ((int)(((byte)(97)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.panel1.Location = new System.Drawing.Point(-9, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Location = new System.Drawing.Point(-8, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(926, 116);
+            this.panel1.Size = new System.Drawing.Size(810, 87);
             this.panel1.TabIndex = 17;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -58,34 +57,34 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(234)))), ((int)(((byte)(216)))));
-            this.label1.Location = new System.Drawing.Point(372, 41);
+            this.label1.Location = new System.Drawing.Point(326, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(211, 35);
+            this.label1.Size = new System.Drawing.Size(170, 26);
             this.label1.TabIndex = 11;
             this.label1.Text = "Log In Account";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // textBox2
+            // pass
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(201)))), ((int)(((byte)(192)))));
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox2.Location = new System.Drawing.Point(427, 273);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(201, 25);
-            this.textBox2.TabIndex = 16;
-            this.textBox2.Text = "Enter password ";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.pass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(201)))), ((int)(((byte)(192)))));
+            this.pass.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.pass.ForeColor = System.Drawing.Color.DimGray;
+            this.pass.Location = new System.Drawing.Point(374, 205);
+            this.pass.Name = "pass";
+            this.pass.Size = new System.Drawing.Size(176, 21);
+            this.pass.TabIndex = 16;
+            this.pass.Text = "Enter password ";
+            this.pass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.pass.MouseClick += new System.Windows.Forms.MouseEventHandler(this.password);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(234)))), ((int)(((byte)(216)))));
-            this.label2.Location = new System.Drawing.Point(447, 141);
+            this.label2.Location = new System.Drawing.Point(391, 106);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 34);
+            this.label2.Size = new System.Drawing.Size(0, 27);
             this.label2.TabIndex = 10;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
@@ -94,10 +93,9 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(201)))), ((int)(((byte)(192)))));
             this.button1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.DimGray;
-            this.button1.Location = new System.Drawing.Point(472, 328);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Location = new System.Drawing.Point(413, 246);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 36);
+            this.button1.Size = new System.Drawing.Size(100, 27);
             this.button1.TabIndex = 11;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = false;
@@ -108,9 +106,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(234)))), ((int)(((byte)(216)))));
-            this.label3.Location = new System.Drawing.Point(264, 216);
+            this.label3.Location = new System.Drawing.Point(231, 162);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 23);
+            this.label3.Size = new System.Drawing.Size(77, 19);
             this.label3.TabIndex = 12;
             this.label3.Text = "Username";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -120,33 +118,33 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(234)))), ((int)(((byte)(216)))));
-            this.label4.Location = new System.Drawing.Point(264, 274);
+            this.label4.Location = new System.Drawing.Point(231, 206);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 23);
+            this.label4.Size = new System.Drawing.Size(72, 19);
             this.label4.TabIndex = 13;
             this.label4.Text = "Password";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // textBox1
+            // user
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(201)))), ((int)(((byte)(192)))));
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox1.Location = new System.Drawing.Point(427, 215);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(201, 25);
-            this.textBox1.TabIndex = 15;
-            this.textBox1.Text = "Enter username ";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.user.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(201)))), ((int)(((byte)(192)))));
+            this.user.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.user.ForeColor = System.Drawing.Color.DimGray;
+            this.user.Location = new System.Drawing.Point(374, 161);
+            this.user.Name = "user";
+            this.user.Size = new System.Drawing.Size(176, 21);
+            this.user.TabIndex = 15;
+            this.user.Text = "Enter username ";
+            this.user.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.user.MouseClick += new System.Windows.Forms.MouseEventHandler(this.username);
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.linkLabel1.Location = new System.Drawing.Point(495, 406);
+            this.linkLabel1.Location = new System.Drawing.Point(433, 304);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(69, 22);
+            this.linkLabel1.Size = new System.Drawing.Size(54, 19);
             this.linkLabel1.TabIndex = 31;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Sign up";
@@ -157,30 +155,29 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(234)))), ((int)(((byte)(216)))));
-            this.label9.Location = new System.Drawing.Point(363, 406);
+            this.label9.Location = new System.Drawing.Point(318, 304);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(135, 22);
+            this.label9.Size = new System.Drawing.Size(107, 19);
             this.label9.TabIndex = 30;
             this.label9.Text = "Not registered?";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(139)))), ((int)(((byte)(116)))));
-            this.ClientSize = new System.Drawing.Size(914, 600);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.pass);
+            this.Controls.Add(this.user);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Login";
             this.Text = "Log In";
             this.Load += new System.EventHandler(this.Login_Load);
@@ -195,12 +192,12 @@
 
         private Panel panel1;
         private Label label1;
-        private TextBox textBox2;
+        private TextBox pass;
         private Label label2;
         private Button button1;
         private Label label3;
         private Label label4;
-        private TextBox textBox1;
+        private TextBox user;
         private LinkLabel linkLabel1;
         private Label label9;
     }
