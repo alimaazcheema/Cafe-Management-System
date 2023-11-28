@@ -89,6 +89,7 @@
             this.Quantity.TabIndex = 59;
             this.Quantity.Text = "Enter Quantity";
             this.Quantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Quantity.MouseClick += new System.Windows.Forms.MouseEventHandler(this.quantity_click);
             this.Quantity.TextChanged += new System.EventHandler(this.Quantity_TextChanged);
             // 
             // price
@@ -102,6 +103,7 @@
             this.price.TabIndex = 58;
             this.price.Text = "Enter Price";
             this.price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.price.MouseClick += new System.Windows.Forms.MouseEventHandler(this.price_click);
             // 
             // name
             // 
@@ -114,6 +116,7 @@
             this.name.TabIndex = 57;
             this.name.Text = "Enter Name";
             this.name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.name.MouseClick += new System.Windows.Forms.MouseEventHandler(this.namee);
             // 
             // price_label
             // 
@@ -160,6 +163,7 @@
             this.VendorID.TabIndex = 64;
             this.VendorID.Text = "Enter VendorID";
             this.VendorID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.VendorID.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Vend);
             // 
             // Vendor
             // 
@@ -183,6 +187,7 @@
             this.ManagerID.TabIndex = 66;
             this.ManagerID.Text = "Enter ManagerID";
             this.ManagerID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ManagerID.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Mngr);
             // 
             // label1
             // 
