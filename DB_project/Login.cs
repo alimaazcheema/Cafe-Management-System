@@ -71,8 +71,10 @@ namespace DB_project
             string role;
             string queryID;
 
-            string connect = "Data Source=DESKTOP-SMU66TS\\SQLEXPRESS01;Initial Catalog=eatly;Integrated Security=True";
-            SqlConnection con = new SqlConnection(connect);
+            // string connect = "Data Source=DESKTOP-SMU66TS\\SQLEXPRESS01;Initial Catalog=eatly;Integrated Security=True";
+            // SqlConnection con = new SqlConnection(connect);
+
+            SqlConnection con = new SqlConnection(@"Data Source =LAPTOP-JL2TMLJA\SQLEXPRESS; Initial Catalog = CMSEATLYDB; Integrated Security = True");
 
             con.Open();
 
@@ -137,6 +139,11 @@ namespace DB_project
         private void password(object sender, MouseEventArgs e)
         {
             this.pass.Text = "";
+        }
+
+        private void user_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
