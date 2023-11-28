@@ -69,7 +69,7 @@
             this.Create_Report.Name = "Create_Report";
             this.Create_Report.Size = new System.Drawing.Size(215, 57);
             this.Create_Report.TabIndex = 42;
-            this.Create_Report.Text = "Create Report and Analysis";
+            this.Create_Report.Text = "View all Menu Items";
             this.Create_Report.UseVisualStyleBackColor = false;
             this.Create_Report.Click += new System.EventHandler(this.create_report);
             // 

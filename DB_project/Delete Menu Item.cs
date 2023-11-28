@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace DB_project
 {
@@ -24,9 +25,35 @@ namespace DB_project
 
         private void delete_button_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Manager_Menu menu = new Manager_Menu();
-            menu.Show();
+            string name = this.textBox1.Text;
+
+            SqlConnection con = new SqlConnection(@"Data Source =LAPTOP-JL2TMLJA\SQLEXPRESS; Initial Catalog = CMSEATLYDB; Integrated Security = True");
+            con.Open();
+            string query;
+            query = "Delete from MenuItem WHERE Name = @name";
+
+            SqlCommand cm = new SqlCommand(query, con);
+            cm.Parameters.AddWithValue("@name", name);
+
+            int result = cm.ExecuteNonQuery();
+
+            if (result > 0)
+            {
+                // MessageBox.Show($"");
+                MessageBox.Show("Item deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                this.Hide();
+                Manager_Menu menu = new Manager_Menu();
+                menu.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("Item not deleted.", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Hide();
+                Manager_Menu menu = new Manager_Menu();
+                menu.Show();
+            }
+            con.Close();
         }
 
         private void name(object sender, MouseEventArgs e)
