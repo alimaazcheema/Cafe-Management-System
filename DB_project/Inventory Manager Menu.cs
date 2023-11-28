@@ -46,8 +46,15 @@ namespace DB_project
         private void delete_item_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Delete_Inevntory temp = new Delete_Inevntory();
+            Delete_Inventory_Item temp = new Delete_Inventory_Item();
             temp.Show();
+        }
+
+        private void logout_button_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Welcome wel = new Welcome();
+            wel.Show();
         }
     }
 }

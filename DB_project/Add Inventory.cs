@@ -72,7 +72,7 @@ namespace DB_project
             SqlConnection con = new SqlConnection(@"Data Source =LAPTOP-JL2TMLJA\SQLEXPRESS; Initial Catalog = CMSEATLYDB; Integrated Security = True");
             con.Open();
             string query;
-            query = "insert into MenuItem values(@name,@price,@quant, @Vendor, @manager)";
+            query = "insert into InventoryItem values(@name,@price,@quant, @Vendor, @manager)";
 
             SqlCommand cm = new SqlCommand(query, con);
             cm.Parameters.AddWithValue("@name", name);

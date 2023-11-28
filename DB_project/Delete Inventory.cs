@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace DB_project
 {
-    public partial class Delete_Inevntory : Form
+    public partial class Delete_Inventory_Item : Form
     {
-        public Delete_Inevntory()
+        public Delete_Inventory_Item()
         {
             InitializeComponent();
         }

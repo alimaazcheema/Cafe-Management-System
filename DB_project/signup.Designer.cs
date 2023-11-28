@@ -70,8 +70,8 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(201)))), ((int)(((byte)(192)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(494, 527);
+            this.button1.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.button1.Location = new System.Drawing.Point(485, 517);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(114, 29);
@@ -309,28 +309,30 @@
             // roleBtn
             // 
             this.roleBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(201)))), ((int)(((byte)(192)))));
+            this.roleBtn.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.roleBtn.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.roleBtn.FormattingEnabled = true;
             this.roleBtn.Items.AddRange(new object[] {
             "Customer",
             "Cashier",
             "Manager",
             "Inventory Manager"});
-            this.roleBtn.Location = new System.Drawing.Point(707, 197);
+            this.roleBtn.Location = new System.Drawing.Point(475, 145);
             this.roleBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.roleBtn.Name = "roleBtn";
-            this.roleBtn.Size = new System.Drawing.Size(132, 28);
+            this.roleBtn.Size = new System.Drawing.Size(170, 25);
             this.roleBtn.TabIndex = 32;
+            this.roleBtn.Text = "Sign up as";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(234)))), ((int)(((byte)(216)))));
-            this.label11.Location = new System.Drawing.Point(707, 168);
+            this.label11.Location = new System.Drawing.Point(716, 194);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(112, 23);
+            this.label11.Size = new System.Drawing.Size(0, 23);
             this.label11.TabIndex = 33;
-            this.label11.Text = "Register as:";
             // 
             // signup
             // 

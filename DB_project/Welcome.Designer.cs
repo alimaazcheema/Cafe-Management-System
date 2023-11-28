@@ -123,11 +123,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(234)))), ((int)(((byte)(216)))));
-            this.label2.Location = new System.Drawing.Point(654, 185);
+            this.label2.Location = new System.Drawing.Point(631, 189);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 25);
+            this.label2.Size = new System.Drawing.Size(162, 25);
             this.label2.TabIndex = 39;
-            this.label2.Text = "Welcome";
+            this.label2.Text = "Welcome User!";
             // 
             // Welcome
             // 

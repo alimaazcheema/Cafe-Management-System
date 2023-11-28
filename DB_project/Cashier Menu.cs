@@ -36,5 +36,12 @@ namespace DB_project
         {
 
         }
+
+        private void logout_button_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Welcome wel = new Welcome();
+            wel.Show();
+        }
     }
 }

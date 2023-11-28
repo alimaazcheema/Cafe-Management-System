@@ -60,5 +60,10 @@ namespace DB_project
         {
             this.textBox1.Text = "";
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

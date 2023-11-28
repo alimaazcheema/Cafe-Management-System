@@ -72,5 +72,24 @@ namespace DB_project
             View_Menu_Item men = new View_Menu_Item();
             men.Show();
         }
+
+        private void logout_button_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Welcome wel=new Welcome();
+            wel.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            View_All_Employees view = new View_All_Employees();
+            view.Show();
+        }
     }
 }
