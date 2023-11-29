@@ -56,5 +56,10 @@ namespace DB_project
             Welcome wel = new Welcome();
             wel.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

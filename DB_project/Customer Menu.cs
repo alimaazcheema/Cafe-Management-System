@@ -19,10 +19,24 @@ namespace DB_project
 
         private void place_order_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Place_Order place= new Place_Order();
+            place.Show();
         }
 
         private void view_order_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void logout_button_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Welcome wel = new Welcome();
+            wel.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

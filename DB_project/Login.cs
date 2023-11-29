@@ -11,8 +11,14 @@ using System.Data.SqlClient;
 
 namespace DB_project
 {
+    public static class SharedData
+    {
+        public static string SharedVariable { get; set; }
+    }
+
     public partial class Login : Form
     {
+        
         public Login()
         {
             InitializeComponent();
@@ -67,6 +73,8 @@ namespace DB_project
         private void button1_Click(object sender, EventArgs e)
         {
             string username = this.user.Text;
+            SharedData.SharedVariable = username;
+
             string password = this.pass.Text;
             string role = "";
 
