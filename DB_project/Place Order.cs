@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace DB_project
 {
-    public partial class Take_Order : Form
+    public partial class Place_Order : Form
     {
-        public Take_Order()
+        public Place_Order()
         {
             InitializeComponent();
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void name_label_Click(object sender, EventArgs e)
         {
 
         }
