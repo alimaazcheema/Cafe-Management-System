@@ -217,6 +217,11 @@ namespace DB_project
             Customer_Menu menu = new Customer_Menu();
             menu.Show();
         }
+
+        private void Place_Order_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

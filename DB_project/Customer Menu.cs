@@ -26,7 +26,9 @@ namespace DB_project
 
         private void view_order_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            View_Order v= new View_Order();
+            v.Show();
         }
 
         private void logout_button_Click(object sender, EventArgs e)
